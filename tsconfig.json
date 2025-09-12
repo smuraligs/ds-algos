@@ -1,0 +1,32 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "target": "es6",
+    "module": "amd",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "lib": [
+      "es2015",
+      "es2018.promise",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "paths": {
+      
+    },
+    "declaration": false,
+    "noEmitOnError": true,
+    "experimentalDecorators": true,
+    
+  },
+  "include": [
+    "./**/DoublyLinkedList.ts"
+  ]
+}

@@ -1,3 +1,16 @@
+/**
+ * Queue is a linear data structure that follows the FIFO (First In First Out) principle.
+ * Elements are added to the back of the queue and removed from the front.
+ * Common operations:
+ * - Enqueue: Add an element to the back of the queue.
+ * - Dequeue: Remove and return the element from the front of the queue.
+ * - Peek: Return the element at the front of the queue without removing it.
+ * - IsEmpty: Check if the queue is empty.
+ * - Size: Return the number of elements in the queue.
+ * - Clear: Remove all elements from the queue.
+ * - PrintQueue: Print all elements in the queue.
+ */
+
 class Queues {
   items: Object;
   headIndex: number;

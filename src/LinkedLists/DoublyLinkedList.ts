@@ -1,3 +1,13 @@
+/**
+ * Doubly Linked List implementation in TypeScript.
+ * Operations: push, pop, shift, unshift
+ * push(val) - adds a new node with value 'val' at the end of the list.
+ * pop() - removes the last node from the list and returns it.
+ * shift() - removes the first node from the list and returns it.
+ * unshift(val) - adds a new node with value 'val' at the beginning of the list.
+ * printListForward() - prints the list from head to tail.
+ * printListBackward() - prints the list from tail to head.
+ */
 class DLListNode {
     val: number;
     prev: DLListNode | null;

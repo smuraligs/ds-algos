@@ -1,3 +1,16 @@
+/**
+ * Split the array into two sub arrays, sort them separately and merge it back.
+ * When we split the array repeatedly, each subarray end up having only one element in it.
+ * 
+ * Time Complexity:
+ *  Best Case: O(n log n), 
+ *  Average Case: O(n log n)
+ *  Worst Case: O(n log n)
+ * 
+ * Space complexity:
+ *  O(n) - additional space required for merging subarrays;
+ */
+
 class MergeSort {
     static sort(arr) {
         if (arr.length == 1) return arr;
@@ -20,19 +33,24 @@ class MergeSort {
                 arr1.splice(0,1);
             }
         }
-        while(arr1.length) {
-            mergedArr.push(arr1[0]);
-            arr1.splice(0,1);
+        if(arr1.length) {
+            mergedArr = mergedArr.concat(arr1);
         }
-        while(arr2.length) {
-            mergedArr.push(arr2[0]);
-            arr2.splice(0,1);
+        if(arr2.length) {
+            mergedArr = mergedArr.concat(arr2);
         }
         return mergedArr;
     }
 }
 
-console.log("Result:", MergeSort.sort([4,3,2,1]));
-console.log("Result:", MergeSort.sort([4,1,2,3]));
-console.log("Result:", MergeSort.sort([5,2,3,1]));
-console.log("Result:", MergeSort.sort([5,2,3,1,4]));
+
+var inputs = [
+    [1,2,3,4],
+    [2,3,4,1],
+    [1,4,3,2],
+    [1,2,3,0],
+    [9,8,7,6]
+  ]
+  for(let i = 0; i<inputs.length; i++) {
+    console.log(MergeSort.sort(inputs[i]));
+  }
